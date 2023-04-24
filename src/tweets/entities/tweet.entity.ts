@@ -1,10 +1,9 @@
-import { Table, Column } from 'sequelize-typescript';
+import { Table, Column, Model } from 'sequelize-typescript';
 
 @Table({
   tableName: 'tweets',
 })
-export class Tweet {
+export class Tweet extends Model {
   @Column
-  id: number;
   name: string;
 }
